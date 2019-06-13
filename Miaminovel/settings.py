@@ -1,4 +1,3 @@
-import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -127,5 +126,4 @@ SILENCED_SYSTEM_CHECKS = [
     'admin.E409',
     'admin.E410',
 ]
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+
