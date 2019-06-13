@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block page_head %}
+    <link href="{% static 'Miaminovel/css/creative1.css' %}" rel="stylesheet">
+    <link href="{% static 'Miaminovel/css/animate.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+{% endblock %}
+{% block page_content %}
+
+    <div>
+        <video autoplay loop muted width="100%">
+            <source src="{% static 'Miaminovel/images/video.mp4' %}" type="video/mp4">
+
+        </video>
+    </div>
+    <div class="box1 fadeInUp animated">
+        <p><strong>Служба знакомств «Miami Novel»</strong> - это превосходная возможность для людей любого возраста,
+            мировоззрения и социального статуса наладить свою личную жизнь.
+
+            Наше агентство знакомств занимается только серьезными отношениями, вся работа центра знакомств направлена на
+            знакомства для брака. Существуют ряд психологических факторов, которые способствуют одиночеству, это может
+            быть низкая самооценка и слабые навыки общения, а также страх потерпеть неудачу в отношениях, особенно, если
+            у них был неудачный опыт в прошлом.
+
+            Наши брачные знакомства позволят помогут Вам стать уверенным в себе и позволят свести риск несовпадения к
+            минимуму, так как профессиональная сваха подбирает Вам человека со схожими интересами, подходящим
+            темпераментом и психотипом.
+
+            Идя на организованную для Вас индивидуальную встречу, Вы будете полностью готовы к общению. Мы не просто
+            знакомим двух одиноких людей, а делаем все, чтобы эти серьезные отношения развивались и приводили к созданию
+            семьи. В нашем большом городе-много брачных агентств, которые помогают людям найти друг друга.
+
+            Сделайте правильный выбор! Позвольте себе самое лучшее! Брачное агентство «Miami Novel» - это прекрасная
+            возможность изменить свою жизнь, создать свою семью, оставив в прошлом все неудачи и страхи. Выбирая клуб
+            знакомств «Miami Novel» - Вы выбираете лучшее из всего многообразия возможного.</p>
+
+    </div>
+    <div class="container" style="padding-top:100px">
+        <div class="row">
+            <div class="col-sm-8">
+                <h1 style="font-family: Inconsolata">КАК МЫ МОЖЕМ ПОМОЧЬ ВАМ СЕГОДНЯ?</h1><br/>
+                <p>Если есть что-то, о чем вы хотите поговорить, пожалуйста, не стесняйтесь связаться с нами. Даже если
+                    вы просто хотите поздороваться, мы с нетерпением ждём от вас сообщения!</p>
+            </div>
+            <div class="col-sm">
+                <a href="mailto:{{ support_email }}" target="_blank">
+                    <p id="img_arrow" style="padding-top:10px">Написать сообщение</p>
+                    <img id="arrow" src="{% static 'Miaminovel/images/arrow.jpeg' %}" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section class="box fadeInUp animated">
+        <div class="container">
+            <h2 class="text-center">Станьте нашим клиентом</h2><br/>
+            <p class="text-center">Для того, чтобы стать клиентом брачного агентства «Miami Novel», нужно посетить наш
+                офис на Юнусабадском районе, предварительно записавшись по телефону +99894 636 59 89, обсудить с нашим
+                специалистом все нюансы и выбрать программу, которая Вам наиболее подходит. Приоритетом в нашей работе
+                является индивидуальный подход к пожеланиям клиента</p>
+        </div>
+    </section>
+
+
+    <section id="contact" class="bg-dark">
+        <div><h2 class="text-center red">Свяжитесь с нами!</h2>
+            <hr class="primary">
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 col-xl-6">
+                    <div class="left container">
+                        <div class="row">
+                            <div class="col-sm-1 col-xl-1"></div>
+                            <div class="col-sm-2 col-xl-2">
+                                <i class="fa fa-map-marker fa-2x yellow"></i>
+                            </div>
+                            <div class="col-sm col-xl blue">
+                                <p>Узбекистан, Ташкент ,ЮНУСАБАДСКИЙ РАЙОН ул.Богишамол, дом-103</p>
+                            </div>
+                            <div class="col-sm-6 col-xl-6"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1 col-xl-1"></div>
+                            <div class="col-sm-2 col-xl-2">
+                                <i class="fa fa-envelope-o fa-2x yellow"></i>
+                            </div>
+                            <div class="col-sm col-xl blue">
+                                <p><a href="mailto:{{ support_email }}"
+                                      target="_blank" class="blue">{{ support_email }}</a></p>
+                            </div>
+                            <div class="col-sm-6 col-xl-6"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1 col-xl-1"></div>
+                            <div class="col-sm-2 col-xl-2 yellow">
+                                <i class="fa fa-phone fa-2x"></i>
+                            </div>
+                            <div class="col-sm col-xl blue">
+                                <p>+99894 636 59 89</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1 col-xl-1"></div>
+                            <div class="col-sm-9 col-xl-9">
+                                <hr id="hr-except"/>
+                            </div>
+                            <div class="col-sm-2 col-xl-2"></div>
+                        </div>
+
+                        <div class="social">
+                            <div class="row">
+                                <div class="col-sm-1 col-xl-1"></div>
+                                <div class="col-sm-8 col-xl-8">
+                                    <a href="https://www.facebook.com/groups/2073099736273854/?ref=bookmarks"
+                                       class="fa fa-facebook fa-2x" target="_blank"></a>
+                                    <a href="#" class="fa fa-instagram fa-2x"></a>
+                                    <a href="skype:shuhrattillabek.olmatov?userinfo" class="fa fa-skype fa-2x"></a>
+                                    <a href="tg://resolve?domain=Romance333" class="fa fa-telegram fa-2x"></a>
+                                    <a href="#" class="fa fa-vk fa-2x"></a>
+                                </div>
+                                <div class="col-sm-3 col-xl-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-6 right">
+                    <img src="{% static 'Miaminovel/images/couple.jpg' %}" alt="">
+                </div>
+            </div>
+            <p class="text-center mar-top-40 margin-bot-0">Ваши контактные данные в безопастности и не будет
+                переданы
+                третьим лицам!</p>
+        </div>
+    </section>
+{% endblock %}

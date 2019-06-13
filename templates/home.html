@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block page_head %}
+    <!-- Custom CSS -->
+    <link href="{% static 'Miaminovel/css/creative1.css' %}" rel="stylesheet">
+{% endblock %}
+{% block page_content %}
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top" style="color: red">Miami novel</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#main-header">Главная</a>
+                    </li>
+                    <li>
+                        <a class="" href="{% url 'designer' %}">Дизайнер модельер</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#psixolog">Психолог</a>
+                    </li>
+                    <li>
+                        <a class="" href="{% url 'contact' %}">Обратная связь</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block main %}
+        <header id="main-header">
+            <div class="header-content">
+                <div class="header-content-inner text-center">
+                    <h1 style="padding-top: 40px">Влюбляйся и будь счастливым</h1>
+                </div>
+            </div>
+        </header>
+        <section class="bg-info" id="welcome">
+            <div class="container">
+                <h2 class="section-heading text-center">Почему мы?</h2>
+                <hr>
+                <div class="row">
+                    <div class="col-12 col-ld-4 col-xl-3 col-sm-6 col-md-2">
+                        <p class="fa fa-check sub">Счастливый брак</p><br/>
+                        <p class="">Тысячи нашли у нас свою любовь.</p>
+                    </div>
+                    <div class="col-12 col-ld-4 col-xl-3 col-sm-6 col-md-2">
+                        <p class="fa fa-check sub">Центр помощи и форум</p><br/>
+                        <p>Ваш успех важен для нас!</p>
+                    </div>
+                    <div class="col-12 col-ld-4 col-xl-3 col-sm-6 col-md-2">
+                        <p class="fa fa-check sub ">Серьезно и надежно</p><br/>
+                    </div>
+                    <div class="col-12 col-ld-4 col-xl-3 col-sm-6 col-md-2">
+                        <p class="fa fa-check sub">100% реальные мужчины</p><br/>
+                    </div>
+                    <div class="col-12 col-ld-4 col-xl-3 col-sm-6 col-md-2">
+                        <p class="fa fa-check sub">Защита данных</p><br/>
+                    </div>
+                    <div class="col-12 col-ld-4 col-xl-3 col-sm-6 col-md-2">
+                        <p class="fa fa-check sub">8 лет опыта работы!</p><br/>
+                        <p>Компетентность и порядочность.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="no-padding" id="navigation">
+            <div class="container-fluid">
+                <div class="row no-gutter">
+                    <div class="col-lg-4 col-sm-4 col-md-2">
+                        <a class="portfolio-box page-scroll" href="{% url 'designer' %}">
+                            <img src="{% static 'Miaminovel/images/designer.png' %}" class="img-responsive"
+                                 style="width: 100%;height: 304px" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-name">
+                                        Дизайнер модельер
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 col-md-2">
+                        <a href="#slujba" class="portfolio-box page-scroll">
+                            <img src="{% static 'Miaminovel/images/about_us.jpg' %}" class="img-responsive"
+                                 style="width: 90%;height: 50%" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-name">
+                                        Служба Качества
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-4 col-md-2">
+                        <a href="#psixolog" class="portfolio-box page-scroll">
+                            <img src="{% static 'Miaminovel/images/psixolog.jpg' %}" class="img-responsive" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-name">
+                                        Психолог
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="slujba">
+            {% include 'partials/slujba.html' %}
+        </div>
+        <div id="psixolog">
+            {% include 'partials/psixolog.html' %}
+        </div>
+    {% endblock %}
+{% endblock %}
+{% block page_js %}
+    <!-- Plugin JavaScript -->
+    <!-- Easing is for the vertical scroll animations -->
+    <script src="{% static 'creative/js/jquery.easing.min.js' %}"></script>
+    <!-- Automatically fit text based on screen size.-->
+    <script src="{% static 'creative/js/jquery.fittext.js' %}"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'creative/js/creative.js' %}"></script>
+{% endblock %}
