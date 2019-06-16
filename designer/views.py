@@ -21,6 +21,6 @@ def contacts(request):
 
 
 def psixolog(request):
-    return render(request, 'partials/contact.html', context={
+    return render(request, 'partials/psixolog.html', context={
         'support_email': settings.DEFAULT_WEDDING_REPLY_EMAIL,
     })

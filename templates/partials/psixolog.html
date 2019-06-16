@@ -1,19 +1,45 @@
 {% load staticfiles %}
-<nav class="navbar navbar-expand-lg bg-light">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Modified from https://github.com/IronSummitMedia/startbootstrap-creative -->
+    <title>Miami Novel</title>
+
+    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'Miaminovel/css/creative.css' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+
+
+
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}" style="color:red;">Miami Novel</a>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="{% url 'home' %}">Главная <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'designer' %}">Дизайнер модельер</a>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{% url 'designer' %}" style="color: red;">Дизайнер модельер</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'psixolog' %}" style="color: red;">Психолог</a>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{% url 'psixolog' %}">Психолог</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="{% url 'contact' %}">Обратная связь</a>
                 </li>
             </ul>
@@ -26,10 +52,10 @@
 </div>
 <div id="gifts" class="container">
     <h2 class="section-heading text-center">Наши услуги</h2>
-    <hr class="primary">
+    <hr style="border-color: red;border-width: 3px">
     <div class="row">
-        <div class="col col-lg-3 col-sm-6 col-md-2">
-            <div class="charity-box">
+        <div class=" col-lg-3 col-sm-6">
+            <div class="">
                 <img src="{% static 'Miaminovel/images/psixolog2.jpg' %}" class="img-responsive" style="height:200px"
                      alt="">
                 <h3><b>Психолог</b></h3>
@@ -40,8 +66,8 @@
                 </p>
             </div>
         </div>
-        <div class="col col-lg-3 col-sm-6 col-md-2">
-            <div class="charity-box">
+        <div class=" col-lg-3 col-sm-6">
+            <div class="">
                 <img src="{% static 'Miaminovel/images/psixoanalitika.jpg' %}" class="img-responsive" style="height:200px"
                      alt="">
                 <h3><b>Психоаналитик</b></h3>
@@ -49,8 +75,8 @@
                     бессознательного содержания. </p>
             </div>
         </div>
-        <div class="col col-lg-3 col-sm-6 col-md-2">
-            <div class="charity-box">
+        <div class=" col-lg-3 col-sm-6">
+            <div class="">
                 <img src="{% static 'Miaminovel/images/seksopotolog.jpg' %}" class="img-responsive" style="height:200px"
                      alt="">
                 <h3><b>Сексопотолог</b></h3>
@@ -61,8 +87,8 @@
                 </p>
             </div>
         </div>
-        <div class="col col-lg-3 col-sm-6 col-md-2">
-            <div class="charity-box">
+        <div class=" col-lg-3 col-sm-6">
+            <div class="">
                 <img src="{% static 'Miaminovel/images/geshtalt.jpeg' %}" class="img-responsive" style="height:200px"
                      alt="">
                 <h3><b>Гештальт терапевт</b></h3>
@@ -77,6 +103,7 @@
 </div>
 <div class="container">
     <div class="uslugu">
+        <div class="row">
         <div class="col-xl-4 col-sm-4">
             <img src="{% static 'Miaminovel/images/person.png' %}" class="img-responsive" alt="">
             <h4><strong>Анонимность</strong></h4>
@@ -84,7 +111,7 @@
                 требуется предварительная регистрация.
             </p>
         </div>
-        <div class="col-xl-4 col-sm-4">
+        <div class="col col-md-4 col-xl-4 col-lg-3">
             <img src="{% static 'Miaminovel/images/lock.png' %}" class="img-responsive" alt="">
             <h4><strong>Конфиденциальность</strong></h4>
             <p>Мы не записываем разговоры и не сохраняем переписку через чат. Консультант гарантирует, что все, о чем вы
@@ -92,13 +119,14 @@
                 об этом не узнает.
             </p>
         </div>
-        <div class="col-xl-4 col-sm-4">
+        <div class="col col-xl-4 col-lg-3">
             <img src="{% static 'Miaminovel/images/hands.png' %}" class="img-responsive" alt="">
             <h4><strong>Уважение</strong></h4>
             <p>То, что тебя волнует, становится важно и для консультанта в момент разговора. Мы стараемся быть бережными
                 и внимательными к каждому обращению.
             </p>
         </div>
+    </div>
     </div>
 </div>
 <div class="container-fluid">
@@ -114,11 +142,11 @@
             </button>
         </div>
         <div class="col-xl-6 col-sm-6">
-            <img src="{% static 'Miaminovel/images/lock-img.jpg' %}" class="img-responsive center mar-top-60" alt="">
+            <img width="650" height="500" src="{% static 'Miaminovel/images/lock-img.jpg' %}" class="img-responsive center mar-top-60" alt="">
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container mar-top-60">
     <h2 id="h2">О чем говорить?</h2><br>
     <p><strong>В каких ситуациях можно обратиться к нам</strong></p>
     <p>Иногда люди думают, что обратиться за помощью психологу можно лишь тогда, когда дошел до края. Это не совсем так.
@@ -235,3 +263,22 @@
         </div>
     </div>
 </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

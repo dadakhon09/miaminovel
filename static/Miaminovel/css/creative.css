@@ -623,7 +623,14 @@ h4 {
 }
 
 .uslugu {
-    margin-top: 50px;
+    margin-top: 80px;
+}
+.uslugu img{
+    padding:30px;
+}
+#gifts img{
+
+    padding: 10px;
 }
 
 #h2 {
