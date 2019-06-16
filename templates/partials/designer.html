@@ -15,42 +15,48 @@
 
 </head>
 <body>
-<nav class="navbar navbar-default">
-    <h2 style="color: red">Miami Novel</h2>
-    <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a class="" href="{% url 'home' %}">Главная</a>
-            </li>
-            <li>
-                <a class="" href="{% url 'designer' %}">Дизайнер модельер</a>
-            </li>
-            <li>
-                <a class="" href="{% url 'psixolog' %}">Психолог</a>
-            </li>
-            <li>
-                <a class="" href="{% url 'contact' %}">Обратная связь</a>
-            </li>
-        </ul>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}" style="color:red;">Miami Novel</a>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Главная <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{% url 'designer' %}" style="color: red;">Дизайнер модельер</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{% url 'psixolog' %}">Психолог</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{% url 'contact' %}">Обратная связь</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
+<div class="container">
 <div id="stage" style="background: rgba(0,0,0,1.0);">
-    <h1 id="spinner" style="background: rgba(0,0,0,0.5); text-align: center; color: #ffa;">Designer modeler</h1>
+    <h1 id="spinner" style="background: rgba(0,0,0,0.5); text-align: center; color: #ffa;">Дизайнер модельер</h1>
 </div>
-<div id="stage" style="padding-left: 512px; height: 160px;">
-    <div id="spinner" style="-webkit-transform-origin: 180px 0 0;">
-        <img style="-webkit-transform: rotateY(0deg) translateX(180px); padding: 0 0 0 160px;"
-             src="{% static 'Miaminovel/images/1.jpg' %}" width="400" height="160" alt="">
-        <img style="-webkit-transform: rotateY(-72deg) translateX(180px); padding: 0 0 0 147px;"
-             src="{% static 'Miaminovel/images/2.jpg' %}" width="413" height="160" alt="">
-        <img style="-webkit-transform: rotateY(-144deg) translateX(180px); padding: 0 0 0 120px;"
-             src="{% static 'Miaminovel/images/3.jpg' %}" width="440" height="160" alt="">
-        <img style="-webkit-transform: rotateY(-216deg) translateX(180px); padding: 0 0 0 147px;"
-             src="{% static 'Miaminovel/images/4.jpg' %}" width="413" height="160" alt="">
-        <img style="-webkit-transform: rotateY(-288deg) translateX(180px); padding: 0 0 0 122px;"
-             src="{% static 'Miaminovel/images/5.jpg' %}" width="438" height="160" alt="">
+</div>
+
+<section>
+    <div class="container-fluid">
+        <div class="gallery">
+            <figure class="gallery__item gallery__item--1">
+                <img src="{% static 'Miaminovel/images/1.png' %}" class="gallery__img" alt="">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img src="{% static 'Miaminovel/images/2.png' %}" class="gallery__img" alt="">
+            </figure>
+            <figure class="gallery__item gallery__item--3">
+                <img src="{% static 'Miaminovel/images/3.png' %}" class="gallery__img" alt="">
+            </figure>
+        </div>
     </div>
-</div>
+</section>
 <div class="container">
     <div id="social">
         <ul>
@@ -66,44 +72,45 @@
             <h1 id="h1">Shuxrat Olmatov</h1>
             <p id="about">Professional designer. Works in this company</p>
             <p id="about"><i>Email:</i> <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a></p>
-            <p id="about"><i>Phone number</i>: +99894 636 59 89</p>
+            <p id="about"><i>Phone number:</i> +99894 636 59 89</p>
+            <p id="about"><i>Address:</i> Узбекистан, Ташкент ,ЮНУСАБАДСКИЙ РАЙОН ул.Богишамол, дом-103</p>
 
         </div>
         <div class="col-12 col-xl-5 col-sm ">
-            <h1 id="h1">Some cool works</h1>
+            <h1 id="h1">Gallery</h1>
             <div class="container">
-                <div class="mySlides">Miaminovel
+                <div class="mySlides">
                     <div class="numbertext">1 / 6</div>
-                    <img src="{% static 'Miaminovel/images/1.jpg' %}" style="width:100%">
+                    <img src="{% static 'Miaminovel/images/1.jpg' %}" style="width:400px; height: 300px">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">2 / 6</div>
-                    <img src="{% static 'Miaminovel/images/2.jpg' %}" style="width:100%">
+                    <img src="{% static 'Miaminovel/images/2.jpg' %}" style="width:400px; height: 300px"">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">3 / 6</div>
-                    <img src="{% static 'Miaminovel/images/3.jpg' %}" style="width:100%">
+                    <img src="{% static 'Miaminovel/images/3.jpg' %}" style="width:400px; height: 300px"">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">4 / 6</div>
-                    <img src="{% static 'Miaminovel/images/4.jpg' %}" style="width:100%">
+                    <img src="{% static 'Miaminovel/images/4.jpg' %}"  style="width:400px; height: 300px">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">5 / 6</div>
-                    <img src="{% static 'Miaminovel/images/5.jpg' %}" style="width:100%">
+                    <img src="{% static 'Miaminovel/images/5.jpg' %}" style="width:400px; height: 300px"">
                 </div>
 
                 <div class="mySlides">
                     <div class="numbertext">6 / 6</div>
-                    <img src="{% static 'Miaminovel/images/6.png' %}" style="width:100%">
+                    <img src="{% static 'Miaminovel/images/6.png' %}" style="width:400px; height: 300px"">
                 </div>
 
                 <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)" style="margin-right: 15px">❯</a>
+                <a class="next" onclick="plusSlides(1)" style="margin-right: -20px">❯</a>
 
                 <!--   <div class="caption-container">
                   <p id="caption"></p>
@@ -140,22 +147,6 @@
     </div>
 </div>
 
-
-<section>
-    <div class="container-fluid">
-        <div class="gallery">
-            <figure class="gallery__item gallery__item--1">
-                <img src="{% static 'Miaminovel/images/1.png' %}" class="gallery__img" alt="">
-            </figure>
-            <figure class="gallery__item gallery__item--2">
-                <img src="{% static 'Miaminovel/images/2.png' %}" class="gallery__img" alt="">
-            </figure>
-            <figure class="gallery__item gallery__item--3">
-                <img src="{% static 'Miaminovel/images/3.png' %}" class="gallery__img" alt="">
-            </figure>
-        </div>
-    </div>
-</section>
 <script type="text/javascript">
 
     // Original JavaScript code by Chirp Internet: www.chirp.com.au

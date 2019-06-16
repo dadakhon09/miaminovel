@@ -105,7 +105,7 @@
                     </div>
 
                     <div class="col-lg-4 col-sm-4 col-md-2">
-                        <a href="#psixolog" class="portfolio-box page-scroll">
+                        <a href="{% url 'psixolog' %}" class="portfolio-box page-scroll">
                             <img src="{% static 'Miaminovel/images/psixolog.jpg' %}" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
@@ -121,9 +121,6 @@
         </section>
         <div id="slujba">
             {% include 'partials/slujba.html' %}
-        </div>
-        <div id="psixolog">
-            {% include 'partials/psixolog.html' %}
         </div>
     {% endblock %}
 {% endblock %}
