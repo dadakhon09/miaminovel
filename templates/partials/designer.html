@@ -1,191 +1,228 @@
-{%load staticfiles%}
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Designer</title>
-  <link href="{% static 'Miaminovelcss/designer.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
-   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Designer</title>
+    <link href="{% static 'Miaminovel/css/designer.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
 
 
 </head>
 <body>
-  <div id="stage" style="background: rgba(0,0,0,1.0);">
-    <h1 id="spinner" style="background: rgba(0,0,0,0.5); text-align: center; color: #ffa;">Designer modeler</h1>
-  </div>
-  <div id="stage" style="padding-left: 512px; height: 160px;">
-    <div id="spinner" style="-webkit-transform-origin: 180px 0 0;">
-    <img style="-webkit-transform: rotateY(0deg) translateX(180px); padding: 0 0 0 160px;" src="{%static 'Miaminovelimages/1.jpg' %}" width="400" height="160" alt="">
-    <img style="-webkit-transform: rotateY(-72deg) translateX(180px); padding: 0 0 0 147px;" src="{%static 'Miaminovelimages/2.jpg' %}" width="413" height="160" alt="">
-    <img style="-webkit-transform: rotateY(-144deg) translateX(180px); padding: 0 0 0 120px;" src="{%static 'Miaminovelimages/3.jpg' %}" width="440" height="160" alt="">
-    <img style="-webkit-transform: rotateY(-216deg) translateX(180px); padding: 0 0 0 147px;" src="{%static 'Miaminovelimages/4.jpg' %}" width="413" height="160" alt="">
-    <img style="-webkit-transform: rotateY(-288deg) translateX(180px); padding: 0 0 0 122px;" src="{%static 'Miaminovelimages/5.jpg' %}" width="438" height="160" alt="">
+<nav class="navbar navbar-default">
+    <h2 style="color: red">Miami Novel</h2>
+    <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a class="" href="{% url 'home' %}">Главная</a>
+            </li>
+            <li>
+                <a class="" href="{% url 'designer' %}">Дизайнер модельер</a>
+            </li>
+            <li>
+                <a class="" href="{% url 'psixolog' %}">Психолог</a>
+            </li>
+            <li>
+                <a class="" href="{% url 'contact' %}">Обратная связь</a>
+            </li>
+        </ul>
     </div>
-  </div>
-  <div class="container">
-          <div id="social">
+</nav>
+<div id="stage" style="background: rgba(0,0,0,1.0);">
+    <h1 id="spinner" style="background: rgba(0,0,0,0.5); text-align: center; color: #ffa;">Designer modeler</h1>
+</div>
+<div id="stage" style="padding-left: 512px; height: 160px;">
+    <div id="spinner" style="-webkit-transform-origin: 180px 0 0;">
+        <img style="-webkit-transform: rotateY(0deg) translateX(180px); padding: 0 0 0 160px;"
+             src="{% static 'Miaminovel/images/1.jpg' %}" width="400" height="160" alt="">
+        <img style="-webkit-transform: rotateY(-72deg) translateX(180px); padding: 0 0 0 147px;"
+             src="{% static 'Miaminovel/images/2.jpg' %}" width="413" height="160" alt="">
+        <img style="-webkit-transform: rotateY(-144deg) translateX(180px); padding: 0 0 0 120px;"
+             src="{% static 'Miaminovel/images/3.jpg' %}" width="440" height="160" alt="">
+        <img style="-webkit-transform: rotateY(-216deg) translateX(180px); padding: 0 0 0 147px;"
+             src="{% static 'Miaminovel/images/4.jpg' %}" width="413" height="160" alt="">
+        <img style="-webkit-transform: rotateY(-288deg) translateX(180px); padding: 0 0 0 122px;"
+             src="{% static 'Miaminovel/images/5.jpg' %}" width="438" height="160" alt="">
+    </div>
+</div>
+<div class="container">
+    <div id="social">
         <ul>
-            <li><a href="https://www.facebook.com/groups/2073099736273854/?ref=bookmarks" class="fa fa-facebook"></a></li>
+            <li><a href="https://www.facebook.com/groups/2073099736273854/?ref=bookmarks" class="fa fa-facebook"></a>
+            </li>
             <li><a href="tg://resolve?domain=Romance333" class="fa fa-telegram"></a></li>
             <li><a href="#" class="fa fa-vk"></a></li>
-            <li><a href="skype:shuhrattillabek.olmatov?userinfo" class="fa fa-skype"></a></li>   
+            <li><a href="skype:shuhrattillabek.olmatov?userinfo" class="fa fa-skype"></a></li>
         </ul>
-      </div>
+    </div>
     <div class="row">
         <div class="col-12 col-xl-6 col-sm ">
-          <h1 id="h1">Shuxrat Olmatov</h1>
-          <p id="about">Professional designer. Works in this company</p>
-          <p id="about"><i>Email:</i> <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a></p>
-          <p id="about"><i>Phone number</i>: +99894 636 59 89</p>
-          
-        </div>  
+            <h1 id="h1">Shuxrat Olmatov</h1>
+            <p id="about">Professional designer. Works in this company</p>
+            <p id="about"><i>Email:</i> <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a></p>
+            <p id="about"><i>Phone number</i>: +99894 636 59 89</p>
+
+        </div>
         <div class="col-12 col-xl-5 col-sm ">
-          <h1 id="h1">Some cool works</h1>
+            <h1 id="h1">Some cool works</h1>
             <div class="container">
-              <div class="mySlides">Miaminovel
-                <div class="numbertext">1 / 6</div>
-                <img src="{%static 'Miaminovelimages/1.jpg' %}" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">2 / 6</div>
-                <img src="{%static 'Miaminovelimages/2.jpg' %}" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">3 / 6</div>
-                <img src="{%static 'Miaminovelimages/3.jpg' %}" style="width:100%">
-              </div>
-                
-              <div class="mySlides">
-                <div class="numbertext">4 / 6</div>
-                <img src="{%static 'Miaminovelimages/4.jpg' %}" style="width:100%">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">5 / 6</div>
-                <img src="{%static 'Miaminovelimages/5.jpg' %}" style="width:100%">
-              </div>
-                
-              <div class="mySlides">
-                <div class="numbertext">6 / 6</div>
-                <img src="{%static 'Miaminovelimages/6.png' %}" style="width:100%">
-              </div>
-                
-              <a class="prev" onclick="plusSlides(-1)">❮</a>
-              <a class="next" onclick="plusSlides(1)" style="margin-right: 15px">❯</a>
-
-              <!--   <div class="caption-container">
-                <p id="caption"></p>
-              </div> -->
-
-              <div class="row">
-                <div class="column">
-                  <img class="demo cursor" src="{%static 'Miaminovelimages/1.jpg' %}" style="width:90%; height: 90%" onclick="currentSlide(1)" alt="">
+                <div class="mySlides">Miaminovel
+                    <div class="numbertext">1 / 6</div>
+                    <img src="{% static 'Miaminovel/images/1.jpg' %}" style="width:100%">
                 </div>
-                <div class="column">
-                  <img class="demo cursor" src="{%static 'Miaminovelimages/2.jpg' %}" style="width:90%" onclick="currentSlide(2)" alt="">
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="{% static 'Miaminovel/images/2.jpg' %}" style="width:100%">
                 </div>
-                <div class="column">
-                  <img class="demo cursor" src="{%static 'Miaminovelimages/3.jpg' %}" style="width:100%" onclick="currentSlide(3)" alt="">
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="{% static 'Miaminovel/images/3.jpg' %}" style="width:100%">
                 </div>
-                <div class="column">
-                  <img class="demo cursor" src="{%static 'Miaminovelimages/4.jpg' %}" style="width:90%" onclick="currentSlide(4)" alt="">
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="{% static 'Miaminovel/images/4.jpg' %}" style="width:100%">
                 </div>
-                <div class="column">
-                  <img class="demo cursor" src="{%static 'Miaminovelimages/5.jpg' %}" style="width:90%" onclick="currentSlide(5)" alt="">
-                </div>    
-                <div class="column">
-                  <img class="demo cursor" src="{%static 'Miaminovelimages/6.png' %}" style="width:100%" onclick="currentSlide(6)" alt="">
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="{% static 'Miaminovel/images/5.jpg' %}" style="width:100%">
                 </div>
-              </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="{% static 'Miaminovel/images/6.png' %}" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)" style="margin-right: 15px">❯</a>
+
+                <!--   <div class="caption-container">
+                  <p id="caption"></p>
+                </div> -->
+
+                <div class="row">
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'Miaminovel/images/1.jpg' %}"
+                             style="width:90%; height: 90%" onclick="currentSlide(1)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'Miaminovel/images/2.jpg' %}" style="width:90%"
+                             onclick="currentSlide(2)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'Miaminovel/images/3.jpg' %}" style="width:100%"
+                             onclick="currentSlide(3)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'Miaminovel/images/4.jpg' %}" style="width:90%"
+                             onclick="currentSlide(4)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'Miaminovel/images/5.jpg' %}" style="width:90%"
+                             onclick="currentSlide(5)" alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" src="{% static 'Miaminovel/images/6.png' %}" style="width:100%"
+                             onclick="currentSlide(6)" alt="">
+                    </div>
+                </div>
             </div>
-        </div>  
-    </div>  
-  </div>
+        </div>
+    </div>
+</div>
 
 
 <section>
-  <div class="container-fluid">
-<div class="gallery">
-  <figure class="gallery__item gallery__item--1"> 
-    <img src="{%static 'Miaminovelimages/1.png' %}" class="gallery__img" alt="">
-  </figure>  
-  <figure class="gallery__item gallery__item--2">   
-    <img src="{%static 'Miaminovelimages/2.png' %}" class="gallery__img" alt="">
-  </figure>
-  <figure class="gallery__item gallery__item--3">    
-    <img src="{%static 'Miaminovelimages/3.png' %}" class="gallery__img" alt="">
-  </figure> 
-</div>
-</div>
+    <div class="container-fluid">
+        <div class="gallery">
+            <figure class="gallery__item gallery__item--1">
+                <img src="{% static 'Miaminovel/images/1.png' %}" class="gallery__img" alt="">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img src="{% static 'Miaminovel/images/2.png' %}" class="gallery__img" alt="">
+            </figure>
+            <figure class="gallery__item gallery__item--3">
+                <img src="{% static 'Miaminovel/images/3.png' %}" class="gallery__img" alt="">
+            </figure>
+        </div>
+    </div>
 </section>
 <script type="text/javascript">
 
-  // Original JavaScript code by Chirp Internet: www.chirp.com.au
-  // Please acknowledge use of this code by including this header.
+    // Original JavaScript code by Chirp Internet: www.chirp.com.au
+    // Please acknowledge use of this code by including this header.
 
-  window.addEventListener("DOMContentLoaded", function(e) {
+    window.addEventListener("DOMContentLoaded", function (e) {
 
-    var maxW = 0;
-    var maxH = 0;
+        var maxW = 0;
+        var maxH = 0;
 
-    var stage = document.getElementById("stage");
-    var fadeComplete = function(e) { stage.appendChild(arr[0]); };
-    var arr = stage.getElementsByTagName("img");
-    for(var i=0; i < arr.length; i++) {
-      if(arr[i].width > maxW) maxW = arr[i].width;
-      if(arr[i].height > maxH) maxH = arr[i].height;
-    }
-    for(var i=0; i < arr.length; i++) {
-      if(arr[i].width < maxW) {
-        arr[i].style.paddingLeft = 10 + (maxW - arr[i].width)/2 + "px";
-        arr[i].style.paddingRight = 10 + (maxW - arr[i].width)/2 + "px";
-      }
-      if(arr[i].height < maxH) {
-        arr[i].style.paddingTop = 10 + (maxH - arr[i].height)/2 + "px";
-        arr[i].style.paddingBottom = 10 + (maxH - arr[i].height)/2 + "px";
-      }
-      arr[i].addEventListener("animationend", fadeComplete, false);
-    }
+        var stage = document.getElementById("stage");
+        var fadeComplete = function (e) {
+            stage.appendChild(arr[0]);
+        };
+        var arr = stage.getElementsByTagName("img");
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].width > maxW) maxW = arr[i].width;
+            if (arr[i].height > maxH) maxH = arr[i].height;
+        }
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].width < maxW) {
+                arr[i].style.paddingLeft = 10 + (maxW - arr[i].width) / 2 + "px";
+                arr[i].style.paddingRight = 10 + (maxW - arr[i].width) / 2 + "px";
+            }
+            if (arr[i].height < maxH) {
+                arr[i].style.paddingTop = 10 + (maxH - arr[i].height) / 2 + "px";
+                arr[i].style.paddingBottom = 10 + (maxH - arr[i].height) / 2 + "px";
+            }
+            arr[i].addEventListener("animationend", fadeComplete, false);
+        }
 
-  }, false);
+    }, false);
 
 </script>
-  <script>
-var slideIndex = 1;
-showSlides(slideIndex);
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
 </script>
 </body>
 

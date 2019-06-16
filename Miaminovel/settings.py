@@ -107,7 +107,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 DEFAULT_WEDDING_FROM_EMAIL = 'You and Your Partner <shuhrat.olmatov@inbox.ru>'
